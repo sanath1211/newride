@@ -21,7 +21,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.sanathkamath04.newride"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -33,6 +38,11 @@
           "locationAlwaysAndWhenInUsePermission": "Allow Ride Buddy to use your location."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        
+      }
+    }
   }
 }

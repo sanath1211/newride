@@ -3,9 +3,10 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome} from '@expo/vector-icons';
 import { AntDesign} from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import FavouriteScreen from '../Screens/FavouriteScreen/FavouriteScreen';
-import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
+import NavigateScreen from '../Screens/ProfileScreen/NavigateScreen';
 import Home from '../../src/Screens/Home';
 import { createStackNavigator } from '@react-navigation/stack';
 import ChooseLocation from '../../src/Screens/ChooseLocation';
@@ -22,11 +23,11 @@ export default function TabNavigation() {
       headerShown:false
     }}>
       <Tab.Screen name='profile'
-        component={ProfileScreen} 
+        component={NavigateScreen} 
         options={{
-          tabBarLabel:'Profile',
+          tabBarLabel:'Navigate',
           tabBarIcon:({color, size})=>(
-            <AntDesign name="user" size={size} color={color} />
+            <MaterialCommunityIcons name="google-maps" size={size} color={color} />
           )
         }}
         />
