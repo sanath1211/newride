@@ -7,6 +7,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import AddressPickup from '../components/AddressPickup';
 import CustomBtn from '../components/CustomBtn';
 import { showError } from '../helper/helperFunction';
+import Header from '../../Apps/Screens/HomeScreen/Header';
 
 const ChooseLocation = (props) => {
     const navigation = useNavigation()
@@ -48,6 +49,7 @@ const ChooseLocation = (props) => {
 
     return (
         <View style={styles.container}>
+            <Header/>
             <ScrollView
                 keyboardShouldPersistTaps="handled"
                 style={{ backgroundColor: 'white', flex: 1, padding: 24 }}
