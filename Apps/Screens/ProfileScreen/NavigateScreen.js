@@ -8,7 +8,7 @@ import ChooseLocation from '../../../src/Screens/ChooseLocation';
 import Home from '../../../src/Screens/Home';
 
 
-export default function ProfileScreen(){
+export default function NavigateScreen(){
   const Stack = createStackNavigator()
   return (
       <Stack.Navigator screenOptions={{
