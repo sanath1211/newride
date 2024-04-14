@@ -7,7 +7,7 @@ import CategoryList from './CategoryList'
 import Globalapi from './../Sevices/Globalapi'
 import PlaceList from './PlaceList'
 import { UserLocationContext } from '../../Context/UserLocationContext';
-import FavouriteScreen from '../FavouriteScreen/FavouriteScreen'
+import FavouriteScreen from '../Club/Club'
 
 export default function HomeScreen() {
   const [placeList,setPlaceList]=useState([]);

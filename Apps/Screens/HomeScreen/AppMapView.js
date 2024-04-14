@@ -18,11 +18,13 @@ export default function AppMapView({placeList}) {
         longitudeDelta:0.0421
       }}
       >
-        <Marker coordinate={{
+        <Marker 
+        image={require("../../../src/assets/images/Oval2x.png")}
+        coordinate={{
           latitude:location?.latitude,
           longitude:location?.longitude
         }}/>
-        {placeList.map((item,index)=>index<=10&&(
+        {placeList.map((item,index)=>index<=7&&(
           <PlaceMarker item={item}/>
         ))}
       </MapView>

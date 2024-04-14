@@ -4,14 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome} from '@expo/vector-icons';
 import { AntDesign} from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import HomeScreen from '../Screens/HomeScreen/HomeScreen';
-import FavouriteScreen from '../Screens/FavouriteScreen/FavouriteScreen';
+import Club from '../Screens/Club/Club';
 import NavigateScreen from '../Screens/ProfileScreen/NavigateScreen';
-import Home from '../../src/Screens/Home';
 import { createStackNavigator } from '@react-navigation/stack';
-import ChooseLocation from '../../src/Screens/ChooseLocation';
-import { NavigationContainer } from '@react-navigation/native';
-import { FlashMessage } from 'react-native-flash-message';
 import HomeNavigation from './HomeNavigation';
 
 const Tab = createBottomTabNavigator();
@@ -39,12 +34,12 @@ export default function TabNavigation() {
             <FontAwesome name="search" size={size} color={color} />
           )
         }}/>
-        <Tab.Screen name='favourite'
-        component={FavouriteScreen} 
+        <Tab.Screen name='club'
+        component={Club} 
         options={{
-          tabBarLabel:'Favourite',
+          tabBarLabel:'Team',
           tabBarIcon:({color, size})=>(
-            <FontAwesome name="heart" size={size} color={color} />
+            <AntDesign name="team" size={size} color={color} />
           )
         }}
         />
