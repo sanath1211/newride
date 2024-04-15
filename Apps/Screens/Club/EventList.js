@@ -12,15 +12,19 @@ export default function EventList() {
     return (
         <View >
         <Header/>
-        <Text>Choose the trip of your interest</Text>
-        <FlatList style={{padding:20}}
-                data={DummyData}
-                keyExtractor={item=>item.id}
-                renderItem={renderItem}
-                refreshControl={
-                    <RefreshControl refreshing={false} onRefresh={()=>console.log('refreshing....')}/>
-                }
-        />
+        <View style={{backgroundColor:'#F1F2F3',elevation:10,padding:10,borderRadius:20,margin:10}}>
+        <Text style={{textAlign:'center',fontSize:20,fontWeight:500}}>Choose the trip of your interest</Text>
+        </View>
+        <View style={{backgroundColor:'#F1F2F3',elevation:10,borderRadius:20}}>
+            <FlatList style={{padding:20}}
+                    data={DummyData}
+                    keyExtractor={item=>item.id}
+                    renderItem={renderItem}
+                    refreshControl={
+                        <RefreshControl refreshing={false} onRefresh={()=>console.log('refreshing....')}/>
+                    }
+            />
+        </View>
         </View>
   )
 }

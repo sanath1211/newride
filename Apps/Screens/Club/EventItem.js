@@ -10,7 +10,7 @@ export default function EventItem({id,title,image,Name,description,phonenumber,l
         <TouchableOpacity onPress={()=>navigation.navigate('event',{eventId:id,title,image,Name,description:description,phonenumber,location})} style={{borderWidth:1,borderColor:'#c5c5c5',
       borderRadius:10,marginVertical:5}}>
           <Text style={{textAlign:'center',fontWeight:700,fontSize:17,margin:10}}>{title}</Text>
-          <Image style={{height:200,width:'100%',borderRadius:20}} source={{uri:image}}/>
+          <Image style={{height:200,width:'100%'}} source={{uri:image}}/>
           <View style={{padding:20}}>
             <Text>{Name}</Text>
             <Text>{description}</Text>
