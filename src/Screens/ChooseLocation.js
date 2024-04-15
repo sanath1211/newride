@@ -1,7 +1,7 @@
 //import libraries
 import { useNavigation } from '@react-navigation/native';
 import React, { Component, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView ,TouchableOpacity,Image} from 'react-native';
 
 //reusable components
 import AddressPickup from '../components/AddressPickup';
@@ -54,16 +54,21 @@ const ChooseLocation = (props) => {
                 keyboardShouldPersistTaps="handled"
                 style={{ backgroundColor: 'white', flex: 1, padding: 24 }}
             >
-                <View style={{ marginBottom: 16 }} />
+                <View style={{ marginBottom: 16}}>
                 <AddressPickup
                     placheholderText="Enter Destination Location"
                     fetchAddress={fetchDestinationCords}
                 />
-                <CustomBtn
-                    btnText="Done"
+                <TouchableOpacity
                     onPress={onDone}
-                    btnStyle={{marginTop:24}}
-                />
+                    style={styles.inpuStyle}>
+                    <Image style={{
+                                width: 25,
+                                height: 25,
+                            }} source={{uri:'https://png.pngtree.com/png-clipart/20220510/original/pngtree-3d-location-icon-design-symbol-png-transparent-background-png-image_7692906.png'}}/>
+                    <Text style={{fontWeight:800,fontSize:15}}>Let's Go</Text>
+                </TouchableOpacity>
+                </View>
             </ScrollView>
         </View>
     );
@@ -71,7 +76,16 @@ const ChooseLocation = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-
     },
+    inpuStyle: {
+        backgroundColor: 'white',
+        borderRadius: 4,
+        borderWidth: 1,
+        alignItems: 'center',
+        height: 48,
+        justifyContent: 'center',
+        marginTop: 16,
+        flexDirection:'row'
+    }
 });
 export default ChooseLocation;

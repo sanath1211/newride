@@ -11,7 +11,7 @@ export default function Events() {
     <View>
         <Header/>
         <View style={{borderWidth:1,borderColor:'#c5c5c5',
-    borderRadius:10,marginVertical:5,padding:20,margin:20}}>
+    borderRadius:10,padding:20,margin:20}}>
             <Text style={{textAlign:'center',fontWeight:700,fontSize:17,margin:10}}>{title}</Text>
           <Image style={{height:200,width:'100%',borderRadius:20}} source={{uri:image}}/>
           <View style={{padding:20}}>

@@ -115,12 +115,11 @@ const ProfileScreen = ({}) => {
 
     return (
         <View style={styles.container}>
-            <View>
-                <Header/>
-            </View>
-            {distance !== 0 && time !== 0 && (<View style={{ alignItems: 'center', marginVertical: 16 }}>
-                <Text>Time left: {time.toFixed(0)} mins</Text>
-                <Text>Distance left: {distance.toFixed(0)} kms</Text>
+            <Header/>
+            {distance !== 0 && time !== 0 && (
+            <View style={{ alignItems: 'center', marginVertical: 16, borderRadius:20}}>
+                <Text style={{fontSize:15,fontWeight:700}}>Time left: {time.toFixed(0)} mins</Text>
+                <Text style={{fontSize:15,fontWeight:700}}>Distance left: {distance.toFixed(0)} kms</Text>
             </View>)}
             <View style={{ flex: 1 }}>
                 <MapView
@@ -193,12 +192,15 @@ const ProfileScreen = ({}) => {
                 </TouchableOpacity>
             </View>
             <View style={styles.bottomCard}>
-                <Text>Where are you going..?</Text>
+                <Text style={{fontWeight:800,fontSize:20}}>Where are you going..?</Text>
                 <TouchableOpacity
                     onPress={onPressLocation}
-                    style={styles.inpuStyle}
-                >
-                    <Text>Choose your location</Text>
+                    style={styles.inpuStyle}>
+                    <Image style={{
+                                width: 25,
+                                height: 25,
+                            }} source={{uri:'https://png.pngtree.com/png-clipart/20220510/original/pngtree-3d-location-icon-design-symbol-png-transparent-background-png-image_7692906.png'}}/>
+                    <Text style={{fontWeight:800,fontSize:15}}> Choose your location</Text>
                 </TouchableOpacity>
             </View>
             <Loader isLoading={isLoading} />
@@ -214,8 +216,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         width: '100%',
         padding: 30,
-        borderTopEndRadius: 24,
-        borderTopStartRadius: 24
+        borderRadius:30,
+        elevation:100,
     },
     inpuStyle: {
         backgroundColor: 'white',
@@ -224,7 +226,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         height: 48,
         justifyContent: 'center',
-        marginTop: 16
+        marginTop: 16,
+        flexDirection:'row'
     }
 });
 
