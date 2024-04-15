@@ -1,13 +1,29 @@
 export const DummyData=[
-    {id:1,test:"Test1",description:'description1'},
-    {id:2,test:"Test2",description:'description2'},
-    {id:3,test:"Test3",description:'description3'},
-    {id:4,test:"Test4",description:'description4'},
-    {id:5,test:"Test5",description:'description5'},
-    {id:6,test:"Test6",description:'description6'},
-    {id:7,test:"Test7",description:'description7'},
-    {id:8,test:"Test8",description:'description8'},
-    {id:9,test:"Test9",description:'description9'},
-    {id:10,test:"Test10",description:'description10'},
-
+    {
+        id:1,
+        title:'Tiger Point lonavala,Pune',
+        image:'https://lh3.googleusercontent.com/p/AF1QipOfRqzx-Qp0oOwJNd5-LtEHUtQUbM-dbDHu-7EN=s1360-w1360-h1020',
+        Name:"Sanath Kamath",
+        description:'Me and my group of Friends are planing to go to lonavala. Plesae join us. If interested contect us on the below details.',
+        phonenumber:'9607131410',
+        location:'Pune'
+    },
+    {
+        id:2,
+        title:'Tiger Point lonavala',
+        image:'https://lh3.googleusercontent.com/p/AF1QipOfRqzx-Qp0oOwJNd5-LtEHUtQUbM-dbDHu-7EN=s1360-w1360-h1020',
+        Name:"Sanath Kamath2",
+        description:'Me and my group of Friends are planing to go to lonavala. Plesae join us. If interested contect us on the below details.',
+        phonenumber:'9607131410',
+        location:'Pune'
+    },
+    {
+        id:3,
+        title:'Tiger Point lonavala',
+        image:'https://lh3.googleusercontent.com/p/AF1QipOfRqzx-Qp0oOwJNd5-LtEHUtQUbM-dbDHu-7EN=s1360-w1360-h1020',
+        Name:"Sanath Kamath3",
+        description:'Me and my group of Friends are planing to go to lonavala. Plesae join us. If interested contect us on the below details.',
+        phonenumber:'9607131410',
+        location:'Pune'
+    },
 ]
