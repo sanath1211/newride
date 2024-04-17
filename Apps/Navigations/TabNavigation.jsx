@@ -37,7 +37,7 @@ export default function TabNavigation() {
         <Tab.Screen name='club'
         component={Club} 
         options={{
-          tabBarLabel:'Team',
+          tabBarLabel:'Community',
           tabBarIcon:({color, size})=>(
             <AntDesign name="team" size={size} color={color} />
           )

@@ -31,13 +31,13 @@ export default function PlaceItem({ place }) {
       <View style={{flex:1}}>
         <Text
           numberOfLines={2}
-          style={{ fontSize: 18, marginBottom: 5}}
+          style={{ fontSize: 18, marginBottom: 5,fontWeight:700}}
         >
           {place.name}
         </Text>
         <Text style={{ fontSize: 16, 
         marginBottom: 5,
-      color:'grey'}} 
+      color:'black'}} 
         numberOfLines={2}>
           {place.vicinity}
         </Text>

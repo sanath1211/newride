@@ -9,7 +9,7 @@ import Share from '../Sevices/Share';
 export default function PlaceDetailItems({place,onDirectionClick}) {  
   return (
     <View>
-       <Text style={{ fontSize: 26, fontFamily: "raleway-bold" }}>
+       <Text style={{ fontSize: 26, fontFamily: "raleway-bold",fontWeight:700}}>
         {place.name}
       </Text>
       <View
@@ -17,12 +17,12 @@ export default function PlaceDetailItems({place,onDirectionClick}) {
           display: "flex",
           alignItems: "center",
           gap: 5,
-          marginTop: 5,
+          marginTop: 10,
           flexDirection: "row",
         }}
       >
         <AntDesign name="star" size={20} color='#FDCC0D' />
-        <Text>{place.rating}</Text>
+        <Text style={{fontWeight:700}}>{place.rating}</Text>
       </View>
       {place?.photos ? (
         <Image
@@ -45,7 +45,7 @@ export default function PlaceDetailItems({place,onDirectionClick}) {
 
       
         <Text
-        style={{ fontSize: 16, marginTop: 10, color: 'grey' }}
+        style={{ fontSize: 16, marginTop: 10, color: 'black' }}
         numberOfLines={2}
         >
         {place.vicinity?place.vicinity:place.formatted_address}
@@ -66,14 +66,18 @@ export default function PlaceDetailItems({place,onDirectionClick}) {
             flexDirection: "row",
             alignItems: "center",
             gap: 5,
-            backgroundColor:'grey',
+            backgroundColor:'white',
             width:110,
             padding:3,
             borderRadius:40,
-            justifyContent:'center'
+            justifyContent:'center',
+            borderWidth:2
           }}
         >
-          <Ionicons name="navigate-circle-outline" size={24} color="black" />
+          <Image style={{
+                                width: 25,
+                                height: 25,
+                            }} source={require('../../../assets/images/direct.png')}/>
           <Text style={{ fontFamily: "raleway", fontSize: 16 }}>Direction</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>Share.SharePlace(place)}
@@ -81,15 +85,19 @@ export default function PlaceDetailItems({place,onDirectionClick}) {
             direction: "flex",
             flexDirection: "row",
             alignItems: "center",
-            gap: 5,
-            backgroundColor:'grey',
-            width:90,
-            padding:3,
+            gap: 10,
+            backgroundColor:'white',
+            width:110,
+            padding:4,
             borderRadius:40,
-            justifyContent:'center'
+            justifyContent:'center',
+            borderWidth:2,
           }}
         >
-         <Ionicons name="md-share-outline" size={24} color="black" />
+         <Image style={{
+                                width: 25,
+                                height: 25,
+                            }} source={require('../../../assets/images/share.png')}/>
           <Text style={{ fontFamily: "raleway", fontSize: 16 }}>Share</Text>
         </TouchableOpacity>
         </View>

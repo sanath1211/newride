@@ -19,12 +19,12 @@ export default function PlaceItemBig({ place }) {
       />:null}
       <Text
         numberOfLines={2}
-        style={{ fontSize: 18, marginBottom: 2}}
+        style={{ fontSize: 18, marginTop:4,marginBottom: 2,fontWeight:700}}
       >
         {place.name}
       </Text>
       <Text
-        style={{ fontSize: 16, marginBottom: 5, color:'grey' }}
+        style={{ fontSize: 16, marginBottom: 5, color:'black' }}
         numberOfLines={2}
       >
         {place.vicinity}

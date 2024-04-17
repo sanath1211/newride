@@ -17,8 +17,20 @@ export default function Events() {
           <View style={{padding:20}}>
             <Text>{Name}</Text>
             <Text>{description}</Text>
-            <Text>{phonenumber}</Text>
-            <Text>{location}</Text>
+            <View style={{flexDirection:'row',gap:3}}>
+            <Image style={{
+                                width: 20,
+                                height: 20,
+                            }} source={require('../../../assets/images/phone.png')}/>
+              <Text>{phonenumber}</Text>
+            </View>
+            <View style={{flexDirection:'row',gap:3}}>
+            <Image style={{
+                                width: 20,
+                                height: 20,
+                            }} source={require('../../../assets/images/location.png')}/>
+              <Text>{location}</Text>
+            </View>
           </View>
         </View>
     </View>
