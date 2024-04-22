@@ -8,6 +8,7 @@ import Club from '../Screens/Club/Club';
 import NavigateScreen from '../Screens/ProfileScreen/NavigateScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeNavigation from './HomeNavigation';
+import TripsScreen from '../Screens/Club/TripsScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack=createStackNavigator();

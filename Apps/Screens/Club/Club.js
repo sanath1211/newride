@@ -1,24 +1,24 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import FlashMessage from 'react-native-flash-message';
+import FormScreen from './FormScreen'; // Adjust the path according to your project structure
+import ConfirmationScreen from './ConfirmationScreen'; // Adjust the path according to your project structure
+import CheckCodeScreen from './CheckCodeScreen'; // This would be your initial screen where users enter a code
 
-//Screens
+const Stack = createStackNavigator();
 
-import Display from './Display';
-import Events from './Events';
-
-
-
-export default function NavigateScreen(){
-  const Stack = createStackNavigator()
+function AppNavigator() {
   return (
-      <Stack.Navigator screenOptions={{
+   
+      <Stack.Navigator initialRouteName="CheckCodeScreen" screenOptions={{
         headerShown:false,
       }}>
-        <Stack.Screen  name="display" component={Display}/>
-        <Stack.Screen name="event" component={Events}/>
+        <Stack.Screen name="CheckCodeScreen" component={CheckCodeScreen} options={{ title: 'Check Code' }} />
+        <Stack.Screen name="FormScreen" component={FormScreen} options={{ title: 'Submit Form' }} />
+        <Stack.Screen name="ConfirmationScreen" component={ConfirmationScreen} options={{ title: 'Confirmation' }} />
       </Stack.Navigator>
+    
   );
-};
+}
 
+export default AppNavigator;
