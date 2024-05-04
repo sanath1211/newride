@@ -1,17 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView,ImageBackground,Button, TouchableOpacity} from 'react-native';
 import Header from '../HomeScreen/Header';
 
-const ConfirmationScreen = ({ route }) => {
+const ConfirmationScreen = ({ navigation,route }) => {
   const { tripDetails } = route.params;
+  const handleNavigateToMap = () => {
+    navigation.navigate('MapScreen', {
+      startingPoint: tripDetails.startingPoint,
+      destination: tripDetails.destination,
+    });
+  };
 
   return (
     <View>
       <Header/>
+    <ImageBackground style={{ height:'100%', width:'100%' }} source={{ uri: 'https://wallpapers.com/images/hd/nature-scenery-portrait-f4lsl6ohevep5674.jpg' }}>
     <ScrollView contentContainerStyle={styles.container}>
-      <View style={{backgroundColor:'white',borderRadius:50,padding:7,elevation:10}}>
+      <View style={{backgroundColor:'#FFAC1C',borderRadius:50,padding:7,elevation:10}}>
         <Text style={{alignSelf:'center',fontSize:25,fontWeight:600}}>Trip Details</Text>
       </View>
+      {tripDetails.image && (
+        <>
+          <Image source={{ uri: tripDetails.image }} style={styles.image} resizeMode="cover" />
+        </>
+      )}
       <Text style={styles.label}>Name:</Text>
       <Text style={styles.value}>{tripDetails.name}</Text>
       <Text style={styles.label}>Description:</Text>
@@ -24,24 +36,26 @@ const ConfirmationScreen = ({ route }) => {
       <Text style={styles.value}>{tripDetails.placeToVisit}</Text>
       <Text style={styles.label}>Date to Go:</Text>
       <Text style={styles.value}>{tripDetails.dateToGo}</Text>
+      <Text style={styles.label}>Starting Point:</Text>
+      <Text style={styles.value}>{tripDetails.startingPoint}</Text>
+      <Text style={styles.label}>Destination:</Text>
+      <Text style={styles.value}>{tripDetails.destination}</Text>
       <Text style={styles.label}>Code:</Text>
       <Text style={styles.value}>{tripDetails.code}</Text>
-      {tripDetails.image && (
-        <>
-          <Text style={styles.label}>Image:</Text>
-          <Image source={{ uri: tripDetails.image }} style={styles.image} resizeMode="cover" />
-        </>
-      )}
+      <TouchableOpacity style={{backgroundColor: '#FFAC1C', width: 330, height: 50, borderRadius: 30}} onPress={handleNavigateToMap}>
+        <Text style={{ alignSelf: 'center', top: 10, fontSize: 15, fontWeight: '800'}}>View on Map</Text>
+      </TouchableOpacity>
     </ScrollView>
+    </ImageBackground>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {padding:20, backgroundColor:'#e5e5e9',borderColor:'black',borderRadius:50,margin:10,elevation:3},
-  label: { fontWeight: 'bold', marginTop: 10,fontSize:17},
+  container: {padding:20, backgroundColor:'#e5e5e9',borderColor:'black',borderRadius:50,margin:10,elevation:3,top:5},
+  label: { fontWeight: 'bold', marginTop:5,fontSize:17},
   value: { marginBottom: 10, fontSize:17},
-  image: { width: 200, height: 200, marginTop: 10, marginBottom: 20, alignSelf:'center'}
+  image: { width: '100%', height: 200, marginTop: 20, marginBottom: 20, alignSelf:'center',borderRadius:20}
 });
 
 export default ConfirmationScreen;

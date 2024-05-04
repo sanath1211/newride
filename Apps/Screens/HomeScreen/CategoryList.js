@@ -40,6 +40,12 @@ export default function CategoryList({setSelectedCategory}) {
           value:'lodging',
           icon:require('../../../assets/images/lodge.png')
       },
+      {
+        id:7,
+        name:'Tourist Places',
+        value:'tourist_attraction',
+        icon:require('../../../assets/images/tourist.png')
+    }
     ]
   return (
     <View style={{marginTop:-40, paddingHorizontal:10}}>

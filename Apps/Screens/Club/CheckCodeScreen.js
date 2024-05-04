@@ -23,15 +23,15 @@ const CheckCodeScreen = ({ navigation }) => {
   return (
     <View>
       <Header/>
-      <ImageBackground style={{ height:'100%', width:'100%' }} source={{ uri: 'https://images.unsplash.com/photo-1590506995460-d0d9892b54da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D' }}>
-        <View style={{ padding: 20, borderRadius: 10, top: 250, backgroundColor: 'white', margin: 20 }}>
+      <ImageBackground style={{ height:'100%', width:'100%' }} source={{ uri: 'https://i.pinimg.com/originals/11/c2/e3/11c2e313f90acd568e755af32ab91928.gif' }}>
+        <View style={{ padding: 20, borderRadius: 10, top: 150, backgroundColor: 'white', margin: 30 }}>
           <TextInput
             style={{ fontSize: 20, height: 50, borderColor: 'gray', borderWidth: 2, marginBottom: 20, padding: 10, borderRadius: 10 }}
             onChangeText={setCode}
             value={code}
             placeholder="Enter the given code"
           />
-          <View style={{ fontSize: 30, flexDirection: 'row', margin: 10, justifyContent: 'space-around', gap: 10 }}>
+          <View style={{ fontSize: 30, flexDirection: 'row', margin: 10, justifyContent: 'space-around', gap: 30 }}>
             <TouchableOpacity style={{ backgroundColor: '#FFAC1C', width: 130, height: 50, borderRadius: 30 }} onPress={checkCode}>
               <Text style={{ alignSelf: 'center', top: 10, fontSize: 15, fontWeight: '800' }}>Join Trip</Text>
             </TouchableOpacity>
